@@ -155,11 +155,4 @@ def style_transfer_image(
             print(m, " of ", steps_per_epoch, end="\r")
             train_step(image)
         img = tensor_to_image(image)
-        img.save(f"{save_name}-{n}.png")
-
-
-if __name__ == "__main__":
-    style_transfer_image(
-        "data/test-img/test1.jpg", "data/cubism/train/0aou4tal.jpg", save_name="blend-wave",
-        style_weight=1e-2, content_weight=1e4, total_variation_weight=30,
-    )
+        img.save(f"static/new/{save_name}-{n}.png")
