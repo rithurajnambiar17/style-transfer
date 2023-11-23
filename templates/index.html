@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Transfer</title>
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="{{url_for('output.html')}}">
+        <input type="file" name="content" id="content">
+        <select name="style" id="style">
+            <option value="cubism">Cubism</option>
+            <option value="impressionism">Impressionism</option>
+            <option value="post-impressionism">Post Impressionism</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="file" name="custom-style" id="custom-style" class="custom-style" style="display: none;">
+        <script>
+            $('#style').on('change', function() {
+                if ($("#style").val() === "other") {
+                    $("#custom-style").show()
+                } else {
+                    $("#custom-style").hide()
+                }
+            });
+        </script>
+        <!-- <label for="custom-style">Custom Style</label> -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
