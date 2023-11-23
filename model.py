@@ -82,7 +82,7 @@ def style_transfer_image(
     content,
     style,
     epochs=10,
-    steps_per_epoch=100,
+    steps_per_epoch=10,
     style_weight=1e-2,
     content_weight=1e4,
     total_variation_weight=30,
