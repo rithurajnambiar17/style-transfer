@@ -156,5 +156,5 @@ def output():
             outputDir = os.listdir('static/incoming')
 
     return render_template("output.html",DIR='static/incoming/' ,outputDir=outputDir)
-
+ 
 app.run(debug=True, port=3000)
