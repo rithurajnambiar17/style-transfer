@@ -8,25 +8,10 @@
 </head>
 <body>
     <form action="{{ url_for('output') }}" method="post" enctype="multipart/form-data">
-        <input type="file" name="content" id="content">
-        <select name="style" id="style">
-            <option value="cubism">Cubism</option>
-            <!-- <option value="impressionism">Impressionism</option>
-            <option value="post-impressionism">Post Impressionism</option> -->
-            <option value="other">Other</option>
-        </select>
-        <input type="file" name="custom-style" id="custom-style" class="custom-style" style="display: none;">
-        <script>
-            $('#style').on('change', function() {
-                if ($("#style").val() === "other") {
-                    $("#custom-style").show()
-                    alert("This feature is currently unavailable.")
-                } else {
-                    $("#custom-style").hide()
-                }
-            });
-        </script>
-        <!-- <label for="custom-style">Custom Style</label> -->
+        <label for="content">Input Image</label>
+        <input type="file" name="content" id="content"><br>
+        <label for="style">Style Image</label>
+        <input type="file" name="style" id="style">
         <input type="submit" value="Submit">
     </form>
 </body>
