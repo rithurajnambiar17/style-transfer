@@ -69,8 +69,7 @@ def output():
             return tf.reduce_sum(tf.square(S - C)) / (4.0 * (channels ** 2) * (size ** 2))
 
         def content_loss(base, combination):
-            return tf.reduce_sum(tf.square(combination - base))
-
+            return tf.reduce_sum(tf.square(combination - base)) 
         def total_variation_loss(x):
             a = tf.square(x[:, : img_nrows - 1, : img_ncols - 1, :] - x[:, 1:, : img_ncols - 1, :])
             b = tf.square(x[:, : img_nrows - 1, : img_ncols - 1, :] - x[:, : img_nrows - 1, 1:, :])
