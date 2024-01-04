@@ -84,7 +84,7 @@ def output():
         # Set up a model that returns the activation values for every layer in
         # VGG19 (as a dict).
         feature_extractor = keras.Model(inputs=model.inputs, outputs=outputs_dict)
-
+ 
         # List of layers to use for the style loss.
         style_layer_names = [
             "block1_conv1",
