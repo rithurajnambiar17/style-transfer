@@ -103,7 +103,7 @@ def output():
             features = feature_extractor(input_tensor)
 
             # Initialize the loss
-            loss = tf.zeros(shape=())
+            loss = tf.zeros(shape=()) 
 
             # Add content loss
             layer_features = features[content_layer_name]
