@@ -124,6 +124,7 @@ def output():
             loss += total_variation_weight * total_variation_loss(combination_image)
             return loss
         
+        
         @tf.function
         def compute_loss_and_grads(combination_image, base_image, style_reference_image):
             with tf.GradientTape() as tape:
